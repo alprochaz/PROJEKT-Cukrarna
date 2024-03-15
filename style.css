@@ -5,15 +5,15 @@ html { box-sizing: border-box; }
 
 /*
 	Poznámky:
-	- maximální šířka obsahu uvnitř sekcí je 1100px
-	- "pruh" s obsahem obsah je vycentrovaný na stránce
-	- všechny sekce mají nahoře a dole padding 80px
-	- kromě hlavičky a patičky, které mají jen 30px
-	- nadpisy jsou fontem Playfair Display, tučně
-	- veškerý další text na stránce fontem Lora
-	- výchozí velikost textu na stránce je 18px, řádkování 1.5
+	- maximální šířka obsahu uvnitř sekcí je 1100px -ok
+	- "pruh" s obsahem obsah je vycentrovaný na stránce -ok
+	- všechny sekce mají nahoře a dole padding 80px -ok
+	- kromě hlavičky a patičky, které mají jen 30px -ok
+	- nadpisy jsou fontem Playfair Display, tučně -ok
+	- veškerý další text na stránce fontem Lora -ok
+	- výchozí velikost textu na stránce je 18px, řádkování 1.5 -ok
 
-	Velikosti nadpisů:
+	Velikosti nadpisů:  -ok
 	h1 - 52px  (nadpis v horní Hero sekci s cupcakem)
 	h2 - 36px  (nadpisy v dalších sekcích)
 	h3 - 18px  (název produktu v Dnešní nabídce)
@@ -22,14 +22,183 @@ html { box-sizing: border-box; }
 	Barvy:
 	#f195b2		růžová - tlačítka a zvýraznění
 	#d2567d		tmavá růžová - hover/aktivní tlačítka
-	#3e606b		tmavá tyrkysová - na nadpisy
-	#242424		(skoro) černá - na běžný text
-	#f0f0f0		světle šedé pozadí prostřední sekce
-	#303339		tmavé pozadí patičky
+	#3e606b		tmavá tyrkysová - na nadpisy -ok
+	#242424		(skoro) černá - na běžný text -ok
+	#f0f0f0		světle šedé pozadí prostřední sekce -ok
+	#303339		tmavé pozadí patičky -ok
 */
 
 
 body {
 	margin: 0;
+	color: 	#242424;
+	font-family: "Lora", serif;
+	font-size: 18px;
+	line-height: 1.5;
+
 }
 
+h1, h2, h3 {
+	font-family: "Playfair Display", serif;
+	line-height: 1.25;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 36px;
+	color: #3e606b;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+section {
+	padding: 80px 0;
+}
+
+.obsah {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px auto;
+	max-width: 1100px;
+
+}
+
+.logo {
+	display: block;
+	flex-basis: 170px;
+}
+
+.menu {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu a {
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	color: 	#242424;
+	border-radius: 20px;
+}
+
+.menu a:hover {
+	background-color: #f195b2;
+}
+
+/* Sekce Hero*/
+.hero {
+	background-image: url("images/cupcake.jpg");
+	background-size: cover;
+	background-position: center;
+	color: white;
+
+}
+
+.vlevo {
+	padding-right: 40%;
+}
+
+.nadpis_hero {
+	font-size: 52px;
+}
+
+.kurziva {
+	font-style: italic;
+	font-size: 24px;
+}
+
+/* Sekce about - Vitejte v nasi kavarne*/
+.about {
+	background-color: lightcyan;
+}
+
+.kontejner_vitejte {
+	display: flex;
+	column-gap: 30px;
+}
+
+.text_vitejte,
+.foto_vitejte {
+	flex-basis: 50%;
+}
+
+.foto_vitejte img {
+	width: 540px;
+	border-radius: 5px;
+}
+
+.tlacitko {
+	display: inline-block;
+	padding: 15px 40px;
+	border-radius: 30px;
+	background-color: #f195b2;
+	text-decoration: none;
+	color: white;
+}
+
+.tlacitko:hover {
+	background-color: #d2567d;
+}
+
+/* Sekce Dnesni nabidka*/
+
+.nabidka {
+	background-color: #f0f0f0;
+}
+
+.kontejner_nabidka {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 30px;
+}
+
+.karty {
+	flex-basis: 20%;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.karty img {
+	width: 250px;
+}
+
+.karty h3,
+.karty p {
+	margin: 20px 20px;
+	text-align: center;
+}
+
+
+/*Sekce Peceni*/
+.kontejner_peceni {
+	display: flex;
+	column-gap: 30px;
+}
+
+.foto_peceni,
+.text_peceni {
+	flex-basis: 50%;
+}
+
+.foto_vitejte img {
+	width: 540px;
+	border-radius: 5px;
+}
+
+
+footer {
+	background-color: #303339;
+	padding: 30px 50px;
+	color: white;
+	text-align: center;
+
+}

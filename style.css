@@ -169,7 +169,7 @@ header {
 }
 
 .karty img {
-	width: 250px;
+	width: 100%;  /*Aby byly rovnou responzivni. Mela jsem nejdriv 250px*/
 }
 
 .karty h3,
@@ -190,7 +190,7 @@ header {
 	flex-basis: 50%;
 }
 
-.foto_vitejte img {
+.foto_peceni img {
 	width: 540px;
 	border-radius: 5px;
 }
